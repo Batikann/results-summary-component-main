@@ -7,4 +7,218 @@
 body{
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 18px;
+    text-align: center;
+    height: 100vh;
+}
+
+:root{
+
+    /*Primary*/
+    --light-red:hsl(0, 100%, 67%);
+    --orangey-yellow:hsl(39, 100%, 56%);
+    --green-teal:hsl(166, 100%, 37%);
+    --cobalt-blue:hsl(234, 85%, 45%);
+
+    /*Gradients*/
+    --light_slate_blue:hsl(252, 100%, 67%);
+    --light_royal_blue:hsl(241, 81%, 54%);
+    --violet_blue:hsla(256, 72%, 46%, 1);
+    --persian-blue:hsla(241, 72%, 46%, 0);
+
+    /*Neutral*/
+    --white:hsl(0, 0%, 100%);
+    --pale-blue:hsl(221, 100%, 96%);
+    --light-lavender:hsl(241, 100%, 89%);
+    --dark-gray-blue:hsl(224, 30%, 27%);
+}  
+
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
+.card .card-left-side{
+    background: linear-gradient(to top,var(--light_royal_blue),var(--light_slate_blue));
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.8rem;
+    border-radius: 0 0 30px 30px;
+}
+
+.card .card-left-side h3{
+    color: var(--light-lavender);
+    margin-bottom: 1rem;
+}
+
+.circle{
+    background: linear-gradient(to bottom,var(--violet_blue),var(--persian-blue));
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    flex-direction: column;
+    color: var(--light-lavender);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.left-side-number{
+    color: var(--white);
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.card-left-side h2{
+    color: var(--white);
+}
+
+.card-left-side .left-side-p{
+    color: var(--light-lavender);
+    font-size: 1rem;
+    max-width: 400px;
+    width: 280px;
+    text-align: start;
+    margin-bottom: 0.5rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-right-side{
+    text-align: start;
+    padding: 2rem;
+}
+
+.card-right-side h3{
+    margin-bottom: 1.2rem;
+}
+
+.box{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.box:first-child{
+    background-color: hsla(0, 100%, 67%,0.1);
+    color: var(--light-red);
+}
+.box:nth-child(2){
+    background-color: hsla(39, 100%, 56%,0.1);
+    color: var(--orangey-yellow);
+}
+.box:nth-child(3){
+    background-color: hsla(166, 100%, 37%,0.1);
+    color: var(--green-teal);
+}
+.box:last-child{
+    background-color: hsla(241, 81%, 54%,0.1);
+    color: var(--violet_blue);
+}
+
+
+
+.box-left-side{
+    gap: 1rem;
+}
+
+.box .title {
+  font-weight: 700;
+}
+
+.box-left-side{
+    display: flex;
+}
+
+.box-text{
+    color: rgb(167, 166, 166);
+    font-weight: 800;
+}
+
+.box-text span{
+  color: var(--dark-gray-blue);
+}
+
+.btn{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 1.2rem 1rem;
+    margin-top: 1rem;
+    border-radius: 50px;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    font-weight: 800;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.btn:hover{
+    background-color: var(--violet_blue);
+}
+
+
+
+@media(min-width:768px){
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--pale-blue);
+    }
+    .card{
+        flex-direction: row;
+        background-color: white;
+   
+        width:700px;
+        border-radius: 30px;
+    }
+
+    .card .card-left-side{
+        border-radius: 30px;
+        width: 50%;
+    }
+
+    .card-right-side{
+        width: 50%;
+    }
+
+    .card-left-side .left-side-p{
+        color: var(--light-lavender);
+        font-size: 1rem;
+        max-width: 400px;
+        width: 220px;
+        text-align: start;
+        margin-bottom: 0.5rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+   
+}
+
+
+
+@media(max-width:320px){
+    .card-left-side .left-side-p{
+        color: var(--light-lavender);
+        font-size: 1rem;
+        width: 250px;
+        text-align: start;
+        margin-bottom: 0.5rem;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
